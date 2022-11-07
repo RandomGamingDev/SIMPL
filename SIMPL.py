@@ -58,7 +58,7 @@ def convert(line):
             for line in include:
                 convert(line)
 
-    outputData += output
+    outputData += output + '\n'
 
 codeFile = open(input("Enter the SIMPL file location: "), "r", encoding="utf-8")
 code = codeFile.readlines()

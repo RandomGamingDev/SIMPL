@@ -67,11 +67,11 @@ codeFile.close()
 outputData += "#include <bitset>\n"
 memLen = int(code[0][0 : len(code)])
 outputData += f"std::bitset<{memLen}> mem = std::bitset<{memLen}>();\n"
-outputData += "int main() {"
+outputData += "int main() {\n"
 for i in range(1, len(code)):
     convert(code[i])
 outputData += "}\n"
 
-writeFile = open(input("Enter the name of the cpp file you'd wish to write to: ", 'w'))
-writeFile.write(output)
+writeFile = open(input("Enter the name of the cpp file you'd wish to write to: "), 'w')
+writeFile.write(outputData)
 writeFile.close()

@@ -47,7 +47,7 @@ def convert(line):
         # GOTO & LABEL
         case "GOTO":
             output += f"goto { elements[1] };"
-        case "LABEL":
+        case "LBL":
             output += f"{ elements[1] }:"
 
         # INCLUDE
